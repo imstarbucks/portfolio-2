@@ -1,0 +1,32 @@
+server {
+	listen 80;
+
+	root /var/www/html/;
+
+	index index.html index.htm index.nginx-debian.html index.php;
+
+	server_name _;
+
+	location / {
+		try_files $uri $uri/ /index.php?$args;
+	}
+
+	location /uploads {
+		client_max_body_size 512M;
+	}
+
+	location ~ \.php$ {
+		include snippets/fastcgi-php.conf;
+		fastcgi_pass unix:/run/php/php7.4-fpm.sock;
+	}
+
+	location ~* \.(js|css|png|jpg|jpeg|gif|ico)$ {
+		expires max;
+		log_not_found off;
+	}
+
+	location ~ ^/wp-json/ {
+		# if permalinks not enabled
+		rewrite ^/wp-json/(.*?)$ /?rest_route=/$1 last;
+	}
+}

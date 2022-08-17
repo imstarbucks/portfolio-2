@@ -1,0 +1,22 @@
+@use '../base/' as *;
+
+a.btn-rounded {
+	padding: .5rem 1rem;
+	border-radius: 30px;
+	border: 0;
+	box-shadow: none;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+a[data-bg-color=yellow] {
+	background-color: $yellow;
+	color: $black;
+	transition: all ease-in-out 200ms;
+
+	&:hover {
+		background-color: $pink;
+	}
+}

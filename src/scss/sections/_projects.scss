@@ -1,0 +1,51 @@
+@use '../base' as *;
+
+.project-thumbnail {
+	object-fit: cover;
+	object-position: top center;
+	width: 100%;
+	height: 100%;
+}
+
+.line {
+	width: 12px;
+	height: 2px;
+	margin: 0 .5rem;
+	background-color: $yellow;
+}
+
+.project-wrapper:hover {
+	.overlay-wrapper {
+		height: 100%;
+		opacity: 1;
+		visibility: visible;
+
+		p {
+			opacity: 1;
+		}
+	}
+}
+
+.overlay-wrapper {
+	top: 0;
+	left: 0;
+	height: 0;
+	width: 100%;
+	text-align: center;
+	background-color: rgb($yellow, .9);
+	padding: .5rem;
+	transition: all 200ms linear;
+	text-decoration: none;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	opacity: 0;
+	visibility: hidden;
+
+	p {
+		color: $white;
+		opacity: 0;
+		transition: all 200ms linear;
+		transition-delay: 200ms;
+	}
+}

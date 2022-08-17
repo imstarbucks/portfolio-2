@@ -1,0 +1,28 @@
+@use '../base' as *;
+
+.skills-list {
+	display: flex;
+	gap: 1rem;
+	flex-wrap: wrap;
+	margin: 1rem auto 2rem;
+}
+
+.skill-block {
+	padding: .5rem;
+	border-radius: .4em;
+	transition: all ease-in-out 200ms;
+
+	&:hover {
+		transform: scale(1.1);
+	}
+
+	&--front-end {
+		background-color: $purple;
+	}
+	&--back-end {
+		background-color: $pink;
+	}
+	&--additional {
+		background-color: $green;
+	}
+}

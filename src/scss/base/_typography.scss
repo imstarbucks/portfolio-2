@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('./fonts/inter/Inter-SemiBold.woff') format('woff2'),
+        url('./fonts/inter/Inter-SemiBold.woff') format('woff'),
+        url('./fonts/inter/Inter-SemiBold.svg#Inter-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./fonts/inter/Inter-Regular.woff2') format('woff2'),
+        url('./fonts/inter/Inter-Regular.woff') format('woff'),
+        url('./fonts/inter/Inter-Regular.svg#Inter-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./fonts/inter/Inter-Bold.woff2') format('woff2'),
+        url('./fonts/inter/Inter-Bold.woff') format('woff'),
+        url('./fonts/inter/Inter-Bold.svg#Inter-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+$fonts: (
+	'sm' : clamp(.8rem, 4vw, 1rem),
+	'md' : clmap(1rem, 4vw, 1.5rem),
+	'lg' : clamp(1.8rem, 4vw, 2rem),
+	'xl' : clamp(2rem, 5vw, 2.5rem),
+	'xxl': clamp(3.5rem, 10vw, 5rem)
+);
+
+@each $name, $value in $fonts {
+	.font-#{$name} {
+		font-size: $value;
+		line-height: 1.2;
+	}
+}

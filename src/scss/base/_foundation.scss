@@ -1,0 +1,44 @@
+@use './colors' as *;
+@use './typography' as *;
+
+body {
+	font-family: 'Inter';
+	background-color: $black;
+	color: $white;
+}
+
+header {
+	h2 {
+		color: $yellow;
+		text-transform: uppercase;
+		@extend .font-xl;
+	}
+
+	h3 {
+		color: white;
+		@extend .font-lg;
+	}
+}
+
+.header-line {
+	position: relative;
+	width: fit-content;
+
+	&::after {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 100px;
+		height: 3px;
+		background-color: $yellow;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		margin: auto;
+		transform: translateX(calc(100% + 1.5rem));
+	}
+}
+
+section {
+	margin-bottom: 5rem !important;
+}

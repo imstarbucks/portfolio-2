@@ -1,0 +1,13 @@
+@use 'bootstrap' as *;
+
+section.section-main {
+
+	.hand-memoji {
+		width: clamp(2rem, 5vw, 3rem);
+	}
+
+	.hello-memoji {
+		width: min(50vw, 100%);
+		max-width: 400px;
+	}
+}

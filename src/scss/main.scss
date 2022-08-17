@@ -1,0 +1,11 @@
+// Vendor
+@use '/node_modules/bootstrap/scss/bootstrap.scss';
+
+// Base
+@use './base/' as *;
+
+// Components
+@use './components/' as *;
+
+// Sections
+@use  './sections/' as *;

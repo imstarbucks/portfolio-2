@@ -1,0 +1,51 @@
+@use 'bootstrap' as *;
+
+/* $padding-x: clamp(5rem, 60vw, 20rem);
+$padding-y: 3rem;
+$padding-x--mobile: 1rem;
+$padding-y--mobile: 2rem;
+
+.padding-container {
+	padding: $padding-y $padding-x;
+
+	@include media-breakpoint-down(md) {
+		padding: $padding-y--mobile $padding-x--mobile;
+	}
+
+	&--x {
+		padding-left: $padding-x;
+		padding-right: $padding-x;
+
+		@include media-breakpoint-down(md) {
+			padding-left: $padding-x--mobile;
+			padding-right: $padding-x--mobile;
+		}
+	}
+
+	&--y {
+		padding-top: $padding-y;
+		padding-bottom: $padding-y;
+
+		@include media-breakpoint-down(md) {
+			padding-top: $padding-y--mobile;
+			padding-bottom: $padding-y--mobile;
+		}
+	}
+} */
+
+.center-container {
+	width: clamp(300px, 50vw, 400px);
+	margin: 3rem auto;
+
+	@include media-breakpoint-down(sm) {
+		width: 80%;
+	}
+}
+
+.font-bold {
+	font-weight: bold;
+}
+
+.font-regular {
+	font-weight: 500;
+}

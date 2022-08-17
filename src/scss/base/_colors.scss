@@ -1,0 +1,25 @@
+$yellow:hsl(40, 42%, 73%);
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 12%);
+$pink: hsl(0, 75%, 69%);
+$purple: hsl(245, 75%, 69%);
+$green: hsl(101, 32%, 46%);
+
+$colors: (
+	'yellow': $yellow,
+	'white' : $white,
+	'black'	: $black,
+	'pink'	: $pink,
+	'purple' : $purple,
+	'green'	: $green
+);
+
+@each $name, $value in $colors {
+	.color-#{$name} {
+		color: $value;
+	}
+
+	.bg-#{$name} {
+		background-color: $value;
+	}
+}
