@@ -1,5 +1,5 @@
-import helloMemoji from '/img/memoji-hello.png'
-import handMemoji from '/img/memoji-hand.png'
+import helloMemoji from '../assets/img/memoji-hello.png'
+import handMemoji from '../assets/img/memoji-hand.png'
 import { createContext, useEffect, useState } from "react"
 
 import { RoundedBtn } from '../Components/Buttons'

@@ -1,4 +1,5 @@
 const ProjectsBlock = ({title, number, thumb, desc, link}) => {
+	console.log(thumb, "thumb");
 	return (
 		<div className="col-11 col-lg-5">
 			<h3 className="d-flex align-items-center font-sm color-yellow font-regular mb-3">

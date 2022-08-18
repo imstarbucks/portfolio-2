@@ -1,4 +1,4 @@
-import contactMemoji from '/img/memoji-contact.png'
+import contactMemoji from '../assets/img/memoji-contact.png'
 
 const Connect = () => {
 

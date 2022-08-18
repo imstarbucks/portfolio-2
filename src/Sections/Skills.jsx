@@ -1,27 +1,26 @@
-import { createContext, useEffect, useState } from "react"
-
-import { getAllSkills } from "../api/ApiCalling"
-
 import SkillsBlock from "../Components/SkillsBlock"
 
 const Skills = () => {
 
-	// const skillList = getAllFrontEnd().then().map((data) => {
-	// 		<SkillsBlock title={data.title.rendered}/>
-	// 	})
-	const [skills, setskills] = useState([""])
-	let ignore = false;
-	useEffect(() => {
-		if(!ignore) {
-			getAllSkills().then(val => {
-				console.log(val);
-				setskills(val)
-			})
-			// console.log("state");
-			ignore=true
+	const skills = [
+		{
+			"id": "01",
+			"slug": "font-end",
+			"title": "Front-end",
+			"skills": ["ReactJS", "GSAP", "Bootstrap", "SASS", "ES6", "JQUERY", "HTML", "CSS", "JavaScript"]
+		}, {
+			"id": "02",
+			"slug": "back-end",
+			"title": "Back-end",
+			"skills": ["PHP", "WordPress"]
+		}, {
+			"id": "03",
+			"slug": "additional",
+			"title": "Additional",
+			"skills": ["Docker", "Figma", "Adobe XD", "Jekyll"]
 		}
-	}, [])
-	// console.log(skills);
+	]
+
 	const listSkills = skills && skills.map((skill, index) =>
 		<SkillsBlock key={skill && skill.id} title={skill.title} skills={skill.skills} slug={skill.slug}></SkillsBlock>
 	)

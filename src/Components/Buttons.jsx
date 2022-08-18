@@ -3,8 +3,6 @@ import ScrollToPlugins from 'gsap/ScrollToPlugin';
 
 gsap.registerPlugin(ScrollToPlugins);
 
-import resume from "/files/Resume-Spencer-Wong.pdf"
-
 export const RoundedBtn = ({color, text}) => {
 
 	const moveTo = (target) => {
